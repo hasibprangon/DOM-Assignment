@@ -7,16 +7,16 @@
     <!-- custom color -->
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-                blogBtn: '#B4F461',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        blogBtn: '#B4F461',
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
     <!-- daisy UI cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,7 +25,7 @@
 
 <body>
     <!-- header section start -->
-    <header>
+    <header class="sticky">
         <nav class="bg-[#F9F7F3]">
             <div class="navbar container mx-auto">
                 <div class="navbar-start">
@@ -33,15 +33,19 @@
                 </div>
                 <div class="navbar-center">
                     <img class="w-7 mx-3" src="./assets/logo.png " alt="">
-                  <h3 class="font-semibold text-xl">Donate Bangladesh</h3>
+                    <h3 class="font-semibold text-xl">Donate Bangladesh</h3>
                 </div>
                 <div class="navbar-end">
                     <img class="w-6" src="./assets/coin.png" alt="">
-                  <p class="font-semibold text-xl">5500</p>
-                  <p class="font-semibold text-xl">BDT</p>
+                    <p class="font-semibold text-xl">5500</p>
+                    <p class="font-semibold text-xl">BDT</p>
                 </div>
-              </div>
+            </div>
         </nav>
+        <div class="mt-16 text-center">
+            <button class="btn bg-[#B4F461]">Donation</button>
+            <button class="btn bg-[#B4F461] px-6">History</button>
+        </div>
     </header>
     <!-- main section start -->
     <main>
