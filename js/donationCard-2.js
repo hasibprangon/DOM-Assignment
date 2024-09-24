@@ -1,7 +1,8 @@
-document.getElementById('firstBtnDonate').addEventListener('click', function (e) {
+// for card-2
+document.getElementById('secondBtnDonate').addEventListener('click', function (e) {
     e.preventDefault();
-    const getDonateAmount = getInputValueById('FirstInput');
-    const DonationGain = getTextValueById('donateGainNoa');
+    const getDonateAmount = getInputValueById('secondInput');
+    const DonationGain = getTextValueById('donateGainFeni');
     const getMainBalance = getTextValueById('mainBalance');
     if(isNaN(getDonateAmount) || getDonateAmount < 0 || getDonateAmount > getMainBalance ){
         alert('Invalid donation');
@@ -9,14 +10,12 @@ document.getElementById('firstBtnDonate').addEventListener('click', function (e)
     }
     else{
         const newBalance = getDonateAmount + DonationGain;
-        document.getElementById('donateGainNoa').innerText = newBalance;
+        document.getElementById('donateGainFeni').innerText = newBalance;
     
         
         const newMainBalance = getMainBalance - getDonateAmount;
         document.getElementById('mainBalance').innerText = newMainBalance;
-        document.getElementById('FirstInput').value = '';
+        document.getElementById('secondInput').value = '';
         alert('Donation successful')
     }
 });
-
-
