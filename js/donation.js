@@ -1,9 +1,9 @@
 document.getElementById('firstBtnDonate').addEventListener('click', function (e) {
     e.preventDefault();
-    const getDonateAmount = getInputValueById('FirstInput');
+    const getDonateAmount = getInputValueById('firstInput');
     const DonationGain = getTextValueById('donateGainNoa');
     const getMainBalance = getTextValueById('mainBalance');
-    if(isNaN(getDonateAmount) || getDonateAmount < 0 || getDonateAmount > getMainBalance ){
+    if(isNaN(getDonateAmount) || getDonateAmount < 0 || getDonateAmount > getMainBalance || getDonateAmount === 0){
         alert('Invalid donation');
         return;
     }
@@ -14,7 +14,6 @@ document.getElementById('firstBtnDonate').addEventListener('click', function (e)
         
         const newMainBalance = getMainBalance - getDonateAmount;
         document.getElementById('mainBalance').innerText = newMainBalance;
-        document.getElementById('FirstInput').value = '';
         alert('Donation successful')
     }
 });

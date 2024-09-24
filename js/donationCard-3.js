@@ -4,18 +4,17 @@ document.getElementById('ThirdBtnDonate').addEventListener('click', function (e)
     const getDonateAmount = getInputValueById('thirdInput');
     const DonationGain = getTextValueById('donateGainQuotaM');
     const getMainBalance = getTextValueById('mainBalance');
-    if(isNaN(getDonateAmount) || getDonateAmount < 0 || getDonateAmount > getMainBalance ){
+    if (isNaN(getDonateAmount) || getDonateAmount < 0 || getDonateAmount > getMainBalance) {
         alert('Invalid donation');
         return;
     }
-    else{
+    else {
         const newBalance = getDonateAmount + DonationGain;
         document.getElementById('donateGainQuotaM').innerText = newBalance;
-    
-        
+
+
         const newMainBalance = getMainBalance - getDonateAmount;
         document.getElementById('mainBalance').innerText = newMainBalance;
-        document.getElementById('thirdInput').value = '';
         alert('Donation successful')
     }
 });

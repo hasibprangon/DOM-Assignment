@@ -15,7 +15,6 @@ document.getElementById('secondBtnDonate').addEventListener('click', function (e
         
         const newMainBalance = getMainBalance - getDonateAmount;
         document.getElementById('mainBalance').innerText = newMainBalance;
-        document.getElementById('secondInput').value = '';
         alert('Donation successful')
     }
 });
