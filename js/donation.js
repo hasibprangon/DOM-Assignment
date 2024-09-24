@@ -14,8 +14,14 @@ document.getElementById('firstBtnDonate').addEventListener('click', function (e)
         
         const newMainBalance = getMainBalance - getDonateAmount;
         document.getElementById('mainBalance').innerText = newMainBalance;
-        alert('Donation successful')
+        modal.showModal();
     }
+   
+});
+
+// got to blog page
+document.getElementById('btnBlog').addEventListener('click', function() {
+    window.location.href = '/blog.html'
 });
 
 
